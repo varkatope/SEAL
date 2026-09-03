@@ -1,6 +1,6 @@
 # Synthetic Audio Library (SEAL) Development Kit
-Copyright (C) 1995, 1996, 1997, 1998, 1999 Carlos Hasan
-Copyright (c) 2000 JB (MAME) (c) 2026 and contributors
+Copyright (C) 1995, 1996, 1997, 1998, 1999 Carlos Hasan 
+(c) 2000 JB (MAME) (c) 2026 and contributors
 
 OS/2 Sound Driver Copyright (C) 1998 Martin Amodeo
 
