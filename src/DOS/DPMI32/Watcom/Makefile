@@ -1,12 +1,9 @@
 # Makefile for WATCOM C/C++32 10.0 (DOS4GW protected mode, flat memory model)
 
 CC = wcc386
-#LD = wcl386
 LD = wlink
 AR = wlib -s -t -q -n
-#CFLAGS = -zq -zu -w9 -we -5r -s -oxt -D__DPMI__ -D__ASM__
-CFLAGS = -zq -zu -w9 -5r -s -oxt -D__DPMI__ -D__ASM__
-#LFLAGS = -l=dos4g -zq
+CFLAGS = -zq -zu -w9 -we -5r -s -oxt -D__DPMI__ -D__ASM__
 LFLAGS = system dos4g
 
 AS = wasm
@@ -20,9 +17,6 @@ OBJS = audio.obj wavfile.obj xmfile.obj s3mfile.obj modfile.obj mtmfile.obj &
 	sbdrv.obj awedrv.obj pasdrv.obj wssdrv.obj gusdrv.obj ariadrv.obj
 
 LIB = "..\lib\DOS\audiowcf.lib"
-
-#all : $(LIB) mp.exe clean .SYMBOLIC
-#	@echo done.
 
 all : $(LIB) mp.exe .SYMBOLIC
 	@echo done.
@@ -45,4 +39,4 @@ $(LIB) : $(OBJS)
 	$(AS) $(AFLAGS) $<
 
 clean : .SYMBOLIC
-	-@del *.obj >nul 2>&1
+	@if exist *.obj del *.obj > nul
