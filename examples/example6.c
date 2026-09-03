@@ -12,6 +12,10 @@
 #define kbhit() 0
 #endif
 
+#ifndef M_PI
+    #define M_PI 3.14159265358979323846
+#endif
+
 int main(void)
 {
     AUDIOINFO info;
@@ -65,8 +69,8 @@ int main(void)
            info.wFormat & AUDIO_FORMAT_16BITS ? 16 : 8,
            info.wFormat & AUDIO_FORMAT_STEREO ? "stereo" : "mono",
            info.nSampleRate, wave.dwLength, chunkSize);
- 
-    /* start playing the sound buffer */ 
+
+    /* start playing the sound buffer */
     APlayVoice(voice, &wave);
 
     while (!kbhit()) {

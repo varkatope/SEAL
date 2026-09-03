@@ -529,7 +529,7 @@ static UINT AIAPI UpdateAudio(UINT nFrames)
 
     if (PAS.wFormat & AUDIO_FORMAT_16BITS) nFrames <<= 1;
     if (PAS.wFormat & AUDIO_FORMAT_STEREO) nFrames <<= 1;
-    if (nFrames <= 0 || nFrames > PAS.nBufferSize)
+    if (nFrames == 0 || nFrames > PAS.nBufferSize)
         nFrames = PAS.nBufferSize;
 
     if ((PAS.lpBuffer = DosLockChannel(PAS.nDmaChannel)) != NULL) {

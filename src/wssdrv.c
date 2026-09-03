@@ -278,7 +278,7 @@ static UINT ADProbe(VOID)
     BYTE nVersion /**, nLIC, nRIC**/;
 
     DEBUG(printf("ADProbe: clear interrupts and wait sync\n"));
-    
+
     /*
      * Clear pending interrupts and wait until synchronization ends
      */
@@ -532,7 +532,7 @@ static UINT ADUpdateAudio(UINT nFrames)
 
     if (Codec.wFormat & AUDIO_FORMAT_16BITS) nFrames <<= 1;
     if (Codec.wFormat & AUDIO_FORMAT_STEREO) nFrames <<= 1;
-    if (nFrames <= 0 || nFrames > Codec.nBufferSize)
+    if (nFrames == 0 || nFrames > Codec.nBufferSize)
         nFrames = Codec.nBufferSize;
 
     if ((Codec.lpBuffer = DosLockChannel(Codec.nDmaChannel)) != NULL) {
@@ -681,7 +681,7 @@ static UINT AIAPI WSSPingAudio(VOID)
             /**[1998/12/02**********************************
              * Experimental code to autodetect the IRQ and
              * DMA resource allocated for the WSS card.
-             */ 
+             */
             wIntf = INB(Codec.wBasePort + WSS_CODEC_INTF);
             Codec.nIrqLine = aIrqs[(wIntf >> 3) & 0x07];
             Codec.nDmaChannel =

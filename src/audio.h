@@ -365,11 +365,11 @@ extern "C" {
     UINT AIAPI AGetModuleStatus(LPBOOL lpnStatus);
     UINT AIAPI ASetModuleCallback(LPFNAUDIOCALLBACK lpfnAudioCallback);
 
-    UINT AIAPI ALoadModuleFile(LPSTR lpszFileName, 
+    UINT AIAPI ALoadModuleFile(LPSTR lpszFileName,
 			       LPAUDIOMODULE* lplpModule, DWORD dwFileOffset);
     UINT AIAPI AFreeModuleFile(LPAUDIOMODULE lpModule);
 
-    UINT AIAPI ALoadWaveFile(LPSTR lpszFileName, 
+    UINT AIAPI ALoadWaveFile(LPSTR lpszFileName,
 			     LPAUDIOWAVE* lplpWave, DWORD dwFileOffset);
     UINT AIAPI AFreeWaveFile(LPAUDIOWAVE lpWave);
 

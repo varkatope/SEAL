@@ -323,7 +323,7 @@ static VOID DSPStartPlayback(VOID)
 {
     DWORD dwBytesPerSecond;
 
-	DEBUG(printf("DSPStartPlayback: reset DSP processor\n"));
+    DEBUG(printf("DSPStartPlayback: reset DSP processor\n"));
 
     /* reset the DSP processor */
     DSPReset();
@@ -706,7 +706,7 @@ static UINT AIAPI UpdateAudio(UINT nFrames)
 
     if (SB.wFormat & AUDIO_FORMAT_16BITS) nFrames <<= 1;
     if (SB.wFormat & AUDIO_FORMAT_STEREO) nFrames <<= 1;
-    if (nFrames <= 0 || nFrames > SB.nBufferSize)
+    if (nFrames == 0 || nFrames > SB.nBufferSize)
         nFrames = SB.nBufferSize;
 
     if ((SB.lpBuffer = DosLockChannel(SB.nDmaChannel)) != NULL) {

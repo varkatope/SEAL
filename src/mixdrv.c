@@ -418,7 +418,7 @@ MixAudioData16SI(LPLONG lpBuffer, UINT nCount, LPVOICE lpVoice)
 #endif
 
 /*JB 2000-02-25*/
-static VOID AIAPI
+static VOID __cdecl AIAPI
 MixAudioData16MRaw(LPLONG lpBuffer, UINT nCount, LPVOICE lpVoice)
 {
     signed int a;
@@ -444,7 +444,7 @@ MixAudioData16MRaw(LPLONG lpBuffer, UINT nCount, LPVOICE lpVoice)
     lpVoice->dwAccum = accum;
 }
 
-static VOID AIAPI
+static VOID __cdecl AIAPI
 MixAudioData16SRaw(LPLONG lpBuffer, UINT nCount, LPVOICE lpVoice)
 {
     signed int a;

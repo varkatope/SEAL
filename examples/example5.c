@@ -27,7 +27,7 @@ int main(void)
 /* call the timer handler 70 times per second */
 #define TIMER_RATE  (1193180/70)
 
-volatile void (interrupt far *lpfnBIOSTimerHandler)(void) = NULL;
+void (interrupt far * volatile lpfnBIOSTimerHandler)(void) = NULL;
 volatile long dwTimerAccum = 0L;
 
 void SetBorderColor(BYTE nColor)

@@ -77,7 +77,7 @@ VOID AIAPI DosSetupChannel(UINT nChannel, BYTE nMode, WORD nCount)
 
     if (nChannel <= 7) {
         /* check out the count parameter */
-        if (nCount <= 0 || nCount >= aDmaBufferLength[nChannel])
+        if (nCount == 0 || nCount >= aDmaBufferLength[nChannel])
             nCount = aDmaBufferLength[nChannel];
 
         /* get buffer physical address and length */
@@ -557,4 +557,3 @@ UINT AIAPI DosParseString(LPSTR lpszText, UINT nToken)
     }
     return BAD_TOKEN;
 }
-

@@ -322,7 +322,7 @@ static UINT AIAPI UpdateAudio(UINT nFrames)
 
     if (Aria.wFormat & AUDIO_FORMAT_16BITS) nFrames <<= 1;
     if (Aria.wFormat & AUDIO_FORMAT_STEREO) nFrames <<= 1;
-    if (nFrames <= 0 || nFrames > Aria.nBufferSize)
+    if (nFrames == 0 || nFrames > Aria.nBufferSize)
         nFrames = Aria.nBufferSize;
 
     if ((nBlockSize = Aria.nWritePosition - Aria.nPosition) < 0)
