@@ -1,8 +1,12 @@
 # Synthetic Audio Library (SEAL) Development Kit
 Copyright (C) 1995, 1996, 1997, 1998, 1999 Carlos Hasan
-All Rights Reserved
+Copyright (c) 2000 JB (MAME) (c) 2026 Eric Chirnside and contributors
 
 OS/2 Sound Driver Copyright (C) 1998 Martin Amodeo
+
+---
+
+This version now builds on DOS with Open Watcom 1.9. Other targets have not been updated.
 
 ---
 
