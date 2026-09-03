@@ -1,10 +1,9 @@
 # Synthetic Audio Library (SEAL) Development Kit
 
-GNU Lesser General Public License Version 2.1
-Copyright (C) 1995-1999 Carlos Hasan 
-(c) 2000 JB (MAME) (c) 2026 and contributors
+<p>GNU Lesser General Public License Version 2.1</p>
+Copyright (c) 1995-1999 Carlos Hasan, (c) 2000 JB (MAME), (c) 2026 and contributors
 
-OS/2 Sound Driver Copyright (C) 1998 Martin Amodeo
+OS/2 Sound Driver Copyright (C) 1998 Martin Amodeo</p>
 
 ---
 
